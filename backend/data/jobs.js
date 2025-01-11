@@ -24,3 +24,5 @@ const jobs = [
     description: 'Make gardens pretty'
   },
 ];
+
+module.exports = jobs;

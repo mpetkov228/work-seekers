@@ -1,9 +1,9 @@
 const data = require('../../data/jobs');
 
-const getJobs = () => {
+const getAll = () => {
   return data;
 };
 
 module.exports = {
-  getJobs
+  getAll
 };
