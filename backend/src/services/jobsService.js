@@ -1,11 +1,12 @@
 const data = require('../../data/jobs');
-const uuid = require('uuid');
+const { v4: uuid } = require('uuid');
 
 const getAll = () => {
   return data;
 };
 
 const create = (job) => {
+  console.log(job);
   const newJob = {
     id: uuid(),
     ...job
