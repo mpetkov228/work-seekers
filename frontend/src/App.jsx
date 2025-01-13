@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 import jobService from "./services/jobs";
+import JobCard from "./components/JobCard";
 
 function App() {
   const [jobs, setJobs] = useState([]);
@@ -13,17 +14,11 @@ function App() {
     fetchJobs();
   }, []);
 
-  const jobStyle = {
-    border: '1px solid black',
-    marginTop: 2,
-    padding: 4
-  };
-
   return (
     <>
       <h1>Work Seekers</h1>
       <div>{jobs.map(job => 
-        <div key={job.id} style={jobStyle}>{job.title}</div>
+        <JobCard key={job.id} job={job} />
       )}</div>
     </>
   );
