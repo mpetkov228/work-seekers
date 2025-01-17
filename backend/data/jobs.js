@@ -1,6 +1,6 @@
 const jobs = [
   {
-    id: 1,
+    id: 'a2d2d07e-3c8e-457f-8628-07265583f759',
     title: 'Junior Developer',
     location: 'Prague',
     salary: '€60000',
@@ -8,7 +8,7 @@ const jobs = [
     description: 'Busy busy job'
   },
   {
-    id: 2,
+    id: '02ce91dc-cf4a-46b1-b008-5becfce1926e',
     title: 'Bricklayer',
     location: 'Munich',
     salary: '€75000',
@@ -16,7 +16,7 @@ const jobs = [
     description: 'Lay bricks'
   },
   {
-    id: 3,
+    id: '1a78fc9f-0c5f-4ff3-85e8-a35465a9bce8',
     title: 'Landscaper',
     location: 'Paris',
     salary: '€64000',
