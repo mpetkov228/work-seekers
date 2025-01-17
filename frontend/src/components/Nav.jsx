@@ -16,7 +16,9 @@ function Nav() {
         <Link to="/testimonials">Testimonials</Link>
         <Link to="/contact">Contact us</Link>
       </div>
-      <div>Work Seekers</div>
+      <div>
+        <Link to="/create">Post a job</Link>
+      </div>
     </div>
   );
 }
