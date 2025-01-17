@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 import jobService from "./services/jobs";
-import JobCard from "./components/JobCard";
 import Nav from "./components/Nav";
 import { Route, Routes } from "react-router";
 import JobList from "./components/JobList";
@@ -9,6 +8,10 @@ import JobCreateForm from "./components/JobCreateForm";
 
 function App() {
   const [jobs, setJobs] = useState([]);
+
+  function appendJob(job) {
+    setJobs(jobs.concat(job));
+  }
 
   useEffect(() => {
     async function fetchJobs() {
@@ -27,7 +30,7 @@ function App() {
         <Route path="/jobs" element={<JobList jobs={jobs} />} />
         <Route path="/testimonials" element={<div>testimonials</div>} />
         <Route path="/contact" element={<div>contact us</div>} />
-        <Route path="/create" element={<JobCreateForm />} />
+        <Route path="/create" element={<JobCreateForm appendJob={appendJob} />} />
       </Routes>
     </>
   );

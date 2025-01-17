@@ -7,6 +7,11 @@ async function getAll() {
   return data;
 }
 
+async function createJob(job) {
+  const { data } = await axios.post(baseUrl, job);
+  return data;
+}
+
 export default {
-  getAll
+  getAll, createJob
 };
