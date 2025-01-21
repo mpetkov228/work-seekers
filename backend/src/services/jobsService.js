@@ -5,6 +5,11 @@ const getAll = () => {
   return data;
 };
 
+const getOne = (id) => {
+  const job = data.find(item => item.id === id);
+  return job;
+};
+
 const create = (job) => {
   console.log(job);
   const newJob = {
@@ -17,5 +22,5 @@ const create = (job) => {
 };
 
 module.exports = {
-  getAll, create
+  getAll, getOne, create
 };
