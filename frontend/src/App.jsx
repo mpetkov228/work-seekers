@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import { Route, Routes } from "react-router";
 import JobList from "./components/JobList";
 import JobCreateForm from "./components/JobCreateForm";
+import JobPage from "./components/JobPage";
 
 function App() {
   const [jobs, setJobs] = useState([]);
@@ -28,6 +29,7 @@ function App() {
       <Routes>
         <Route path="/" element={<div>home</div>} />
         <Route path="/jobs" element={<JobList jobs={jobs} />} />
+        <Route path="/jobs/:id" element={<JobPage jobs={jobs} />} />
         <Route path="/testimonials" element={<div>testimonials</div>} />
         <Route path="/contact" element={<div>contact us</div>} />
         <Route path="/create" element={<JobCreateForm appendJob={appendJob} />} />
